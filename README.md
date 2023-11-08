@@ -5,7 +5,7 @@
 **1] Clone the project**
 
 ```bash
-  git clone https://github.com/AbhishekBhosale46/DRF-Recipe-Sharing
+  git clone https://github.com/AbhishekBhosale46/DRF-Firebase-Mongo
 ```
 
 **2] Go to the project directory**
