@@ -1,5 +1,23 @@
 # DRF-Firebase-Mongo
 
+## Environment Variables
+
+To run this project, you will need to add the following environment variables to your .env file
+
+FB_WEB_KEY = `YOUR FIREBASE WEB API KEY`
+
+FB_CONFIG_FILE_PATH = `PATH TO FIREBASE CONFIG FILE`
+
+MONGO_DB_NAME = `MONGODB DATABASE NAME`
+
+MONGO_HOST = `MONGODB HOST ADDRESS`
+
+MONGO_USER = `MONGODB USERNAME`
+
+MONGO_PASSWORD = `MONGODB PASSWORD`
+
+
+
 ## Run Locally
 
 **1] Clone the project**
