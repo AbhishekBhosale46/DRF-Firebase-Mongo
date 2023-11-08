@@ -16,7 +16,9 @@ from dotenv import load_dotenv
 import firebase_admin
 from firebase_admin import credentials
 
-cred = credentials.Certificate("F:/DRF Firebase Mongo/backend/drf-firebase-60238-firebase-adminsdk-rrp6x-0dc7cbe540.json")
+load_dotenv()
+
+cred = credentials.Certificate(os.getenv('FB_CONFIG_FILE_PATH'))
 firebase_admin.initialize_app(cred)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -84,9 +86,16 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': BASE_DIR / 'db.sqlite3',
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': os.getenv('MONGO_DB_NAME'),
+        'HOST': os.getenv('MONGO_HOST'),
+        'USER': os.getenv('MONGO_USER'),
+        'PASSWORD': os.getenv('MONGO_PASSWORD'),
     }
 }
 
